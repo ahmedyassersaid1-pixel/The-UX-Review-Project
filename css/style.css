@@ -1,0 +1,113 @@
+/* start global css style */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Exo", sans-serif;
+  background-color: #fafafa;
+}
+::selection {
+  background-color: #ffd15b;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 16px 24px;
+  background-color: #ffd15b;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+img {
+  width: 100%;
+}
+button {
+  cursor: pointer;
+}
+/* end global css style */
+
+/* start nav */
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 5000;
+  padding: 1rem;
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 1rem;
+  background-color: white;
+  border: 2px solid black;
+}
+nav .container .logo h1 {
+  color: #111;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 36px;
+}
+nav .container .logo h1 span {
+  color: #ff6900;
+}
+nav .nav-links ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+nav .nav-links ul li {
+  display: flex;
+  align-items: center;
+}
+nav .nav-links ul li a {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+nav .nav-links ul li a:hover {
+  color: #ff6900;
+}
+nav .nav-links ul li img {
+  width: 1.5rem;
+  margin-left: 1rem;
+}
+nav .nav-btn button {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  padding: 0.5rem 1rem;
+  border: 2px solid black;
+  border-radius: 38px;
+  background-color: #ffd15b;
+  transition: all 0.15s;
+}
+nav .nav-btn button:hover {
+  transform: translate(3px, 3px);
+}
+/* end nav */
+
+/* media */
+@media (min-width: 640px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 1024px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1536px) {
+}
