@@ -163,12 +163,14 @@ nav .nav-btn button:hover {
   line-height: 32px;
   box-shadow: 3px 3px 0px 0px #000;
 }
-.sec-one .text-sec-one .sec-one-btn {
+.sec-one .text-sec-one .sec-one-btn,
+.articles-header .head .sec-two-btn {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.sec-one .text-sec-one .sec-one-btn button {
+.sec-one .text-sec-one .sec-one-btn button,
+.articles-header .head .sec-two-btn button {
   display: flex;
   align-items: center;
   padding: 1rem 2rem;
@@ -183,7 +185,8 @@ nav .nav-btn button:hover {
   transition: var(--transition-function);
 }
 
-.sec-one .text-sec-one .sec-one-btn button:hover {
+.sec-one .text-sec-one .sec-one-btn button:hover,
+.articles-header .head .sec-two-btn button:hover {
   box-shadow: 0px 0px 0px 0px #000;
   transform: translate(5px, 5px);
 }
@@ -192,7 +195,8 @@ nav .nav-btn button:hover {
   color: rgb(0, 0, 0);
 }
 
-.sec-one .text-sec-one .sec-one-btn .image {
+.sec-one .text-sec-one .sec-one-btn .image,
+.articles-header .head .sec-two-btn .image {
   width: 30px;
   margin-right: 4px;
 }
@@ -238,19 +242,26 @@ nav .nav-btn button:hover {
   padding: 80px 0;
   border: 2px solid black;
 }
-.articles-header {
-  background-color: #a42626;
-}
 .articles-header .head {
-  background-color: #5026a470;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+  align-items: flex-start;
+}
+.articles-header .left {
+  width: 65%;
+}
+.articles-header .head .right {
+  width: 33%;
+  position: sticky;
+  top: 50px;
 }
 .articles-header .header {
-  background-color: #3033e9;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  width: 65%;
+  width: 100%;
   margin-bottom: 3rem;
 }
 .articles-header .header h2 {
@@ -262,7 +273,7 @@ nav .nav-btn button:hover {
   transform: rotate(2deg);
 }
 .articles-header .head .card {
-  width: 65%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   background-color: #ffffff;
@@ -270,6 +281,7 @@ nav .nav-btn button:hover {
   border: 4px solid black;
   transition: var(--transition-function);
   box-shadow: 4px 4px #000000;
+  margin-bottom: 2rem;
 }
 .articles-header .head .card:hover {
   transform: translate(-2px, -2px);
@@ -277,6 +289,12 @@ nav .nav-btn button:hover {
 }
 .articles-header .head .card:hover h3 {
   color: #e7000b;
+}
+.articles-header .head .card-two:hover h3 {
+  color: #2b7fff;
+}
+.articles-header .head .card-three:hover h3 {
+  color: #ad46ff;
 }
 .articles-header .card .card-image {
   position: relative;
@@ -293,11 +311,25 @@ nav .nav-btn button:hover {
   line-height: 1rem;
   transform: rotate(12deg);
   top: -0.5rem;
-  right: -0.5rem;
+  right: 1.5rem;
+}
+.articles-header .card-two .tag {
+  transform: rotate(-12deg);
+  background-color: #2b7fff;
+}
+.articles-header .card-three .tag {
+  transform: rotate(45deg);
+
+  background-color: #ad46ff;
 }
 .articles-header .card .card-image .image {
-  width: 180px;
+  width: calc(0.25rem * 40);
+  height: calc(0.25rem * 32);
   border: 2px solid black;
+}
+.articles-header .card .card-image .image img {
+  width: 100%;
+  height: 100%;
 }
 .articles-header .card .card-text {
   width: 70%;
@@ -311,6 +343,15 @@ nav .nav-btn button:hover {
   color: #000;
   transform: rotate(-1deg);
   box-shadow: 3px 3px #000;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1rem;
+}
+.articles-header .card-two .card-text .tag-two {
+  background-color: #7bf1a8;
+}
+.articles-header .card-three .card-text .tag-two {
+  background-color: #fda5d5;
 }
 .articles-header .card .card-text h3 {
   font-size: 1.5rem;
@@ -344,6 +385,125 @@ nav .nav-btn button:hover {
 .red-col {
   color: #e7000b;
 }
+.articles-header .head .sec-two-btn {
+  width: 100%;
+}
+.articles-header .head .sec-two-btn button {
+  margin: 0 auto;
+}
+/* start right */
+.right .one {
+  margin-bottom: 2rem;
+}
+.right .detials {
+  padding: 2rem;
+  box-shadow: 6px 6px #000;
+  border: 4px solid #000;
+    background-color: #ffffff;
+
+}
+.right .detials h3 {
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 36px;
+  margin-bottom: 24px;
+}
+.right .detials .item {
+  display: flex;
+  flex-wrap: wrap;
+}
+.right .detials .item-space {
+  margin-bottom: 24px;
+}
+.right .detials .item span {
+  color: #fb2c36;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 40px;
+  margin-right: 1rem;
+}
+.right .detials .item span.span-two {
+  color: #42a5f5;
+}
+.right .detials .item span.span-three {
+  color: #ad46ff;
+}
+.right .detials .item-text h4 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+}
+.right .detials .item-text p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #525252;
+}
+/* hover */
+.right .item-one:hover h4 {
+  color: #fb2c36;
+}
+.right .item-two:hover h4 {
+  color: #42a5f5;
+}
+.right .item-three:hover h4 {
+  color: #ad46ff;
+}
+/*end hover */
+/*start two */
+
+.two .detials .options .option {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 0.75rem 1rem;
+  border: 2px solid #000;
+  transition: var(--transition-function);
+}
+.two .detials .options .option1 {
+  background-color: #fef9c2;
+}
+.two .detials .options .option2 {
+  background-color: #dcfce7;
+}
+.two .detials .options .option3 {
+  background-color: #fce7f3;
+}
+.two .detials .options .option4 {
+  background-color: #dbeafe;
+}
+.two .detials .options .option5 {
+  background-color: #f3e8ff;
+}
+/* hover */
+
+.two .detials .options .option:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px #000;
+}
+.two .detials .options .option1:hover {
+  background-color: #ffdf20;
+}
+.two .detials .options .option2:hover {
+  background-color: #7bf1a8;
+}
+.two .detials .options .option3:hover {
+  background-color: #fda5d5;
+}
+.two .detials .options .option4:hover {
+  background-color: #8ec5ff;
+}
+.two .detials .options .option5:hover {
+  background-color: #dab2ff;
+}
+.two .detials .options .option1,
+.two .detials .options .option2,
+.two .detials .options .option3,
+.two .detials .options .option4 {
+  margin-bottom: 0.75rem;
+}
+/*end two */
+/* end right */
 /* end ARTICLES sectiom  */
 
 /* media */
